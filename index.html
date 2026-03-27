@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Sports Spotlight</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <!-- =============================================
+           ROW 1: 4 individual team cards (col-1 x4)
+           Mobile: 1 column | Tablet: 2 columns | Desktop: 4 columns
+           ============================================= -->
+      <h2 class="section-title">Featured Teams</h2>
+      <div class="row row-4col">
+        <article class="col-1">
+          <span class="badge">NBA</span>
+          <h3>Los Angeles Lakers</h3>
+          <img src="https://picsum.photos/seed/lakers/400/266" alt="Lakers team photo">
+          <p>One of the most storied franchises in NBA history, the Lakers have won 17 championships. With legends like Kobe Bryant and LeBron James, the purple and gold remain a symbol of excellence in basketball.</p>
+          <p><a href="#" target="_blank">Team Profile &gt;&gt;</a></p>
+        </article>
+        <article class="col-1">
+          <span class="badge">NFL</span>
+          <h3>Dallas Cowboys</h3>
+          <img src="https://picsum.photos/seed/cowboys/400/266" alt="Cowboys team photo">
+          <p>Known as "America's Team," the Dallas Cowboys are one of the most valuable sports franchises in the world. With 5 Super Bowl titles and a global fanbase, they remain the NFL's biggest brand.</p>
+          <p><a href="#" target="_blank">Team Profile &gt;&gt;</a></p>
+        </article>
+        <article class="col-1">
+          <span class="badge">MLB</span>
+          <h3>New York Yankees</h3>
+          <img src="https://picsum.photos/seed/yankees/400/266" alt="Yankees team photo">
+          <p>The most successful franchise in Major League Baseball history with 27 World Series titles. The Yankees' pinstripes and iconic logo are recognized around the globe as a symbol of excellence.</p>
+          <p><a href="#" target="_blank">Team Profile &gt;&gt;</a></p>
+        </article>
+        <article class="col-1">
+          <span class="badge">NHL</span>
+          <h3>Chicago Blackhawks</h3>
+          <img src="https://picsum.photos/seed/hawks/400/266" alt="Blackhawks team photo">
+          <p>The Chicago Blackhawks are one of the Original Six NHL teams. Boasting 6 Stanley Cup championships, they built a dynasty in the 2010s with legendary players like Jonathan Toews and Patrick Kane.</p>
+          <p><a href="#" target="_blank">Team Profile &gt;&gt;</a></p>
+        </article>
+      </div>
+
+      <!-- =============================================
+           ROW 2: 2 boxes, each spanning 2 columns (col-2 x2)
+           Mobile: 1 column | Tablet: 2 columns | Desktop: 2 columns
+           ============================================= -->
+      <h2 class="section-title">Rising Contenders</h2>
+      <div class="row row-2col">
+        <article class="col-2">
+          <span class="badge">MLS</span>
+          <h3>Inter Miami CF</h3>
+          <img src="https://picsum.photos/seed/miami/400/266" alt="Inter Miami team photo">
+          <p>Since Lionel Messi's arrival in 2023, Inter Miami has become the hottest ticket in American soccer. The club's pink and black colors have taken on a whole new meaning as the team competes for MLS glory.</p>
+          <p>With a world-class roster and passionate fanbase growing daily, Inter Miami represents the future of soccer in the United States.</p>
+          <p><a href="#" target="_blank">Team Profile &gt;&gt;</a></p>
+        </article>
+        <article class="col-2">
+          <span class="badge">NBA</span>
+          <h3>Oklahoma City Thunder</h3>
+          <img src="https://picsum.photos/seed/thunder/400/266" alt="Thunder team photo">
+          <p>Built through the draft with superstar Shai Gilgeous-Alexander leading the way, OKC has quickly become one of the most exciting young teams in the NBA. Their blend of talent and energy makes every game electric.</p>
+          <p>The Thunder have positioned themselves as a legitimate title contender, proving that great team-building pays off in the long run.</p>
+          <p><a href="#" target="_blank">Team Profile &gt;&gt;</a></p>
+        </article>
+      </div>
+
+      <!-- =============================================
+           ROW 3: 1 narrow sidebar column + 1 wide content column
+           Desktop: 1col (narrow) + 3col (wide) | Tablet/Mobile: stacked
+           Uses grid-column span for the wide item
+           ============================================= -->
+      <h2 class="section-title">Team Spotlight</h2>
+      <div class="row row-spotlight">
+        <article class="col-sidebar">
+          <span class="badge">Quick Stats</span>
+          <h3>Did You Know?</h3>
+          <ul>
+            <li>🏆 33 combined championships across our featured teams</li>
+            <li>🌍 Fanbases spanning 6 continents</li>
+            <li>⭐ Over 50 Hall of Famers combined</li>
+            <li>📺 Billions of viewers worldwide each season</li>
+            <li>💰 Combined value over $50 billion</li>
+          </ul>
+          <p><a href="#" target="_blank">More Stats &gt;&gt;</a></p>
+        </article>
+        <article class="col-wide">
+          <span class="badge">Feature</span>
+          <h3>Golden State Warriors: The Dynasty That Changed Basketball</h3>
+          <img src="https://picsum.photos/seed/warriors/800/400" alt="Warriors feature photo">
+          <p>Few teams in sports history have altered the fabric of their sport the way the Golden State Warriors did during the 2010s. With four NBA championships in eight years (2015, 2017, 2018, 2022), the Warriors didn't just win — they revolutionized how basketball is played at every level.</p>
+          <p>The "Splash Brothers" — Stephen Curry and Klay Thompson — along with Draymond Green and Kevin Durant, created a brand of basketball that prioritized three-point shooting, ball movement, and defensive versatility. Curry's unprecedented shooting range forced defenses to completely rethink how they guard the perimeter, a shift that is still felt throughout basketball today.</p>
+          <p><a href="#" target="_blank">Read Full Feature &gt;&gt;</a></p>
+        </article>
+      </div>
+
+      <!-- =============================================
+           ROW 4: Single full-width banner (4 columns wide)
+           All breakpoints: spans the entire row
+           Uses grid-column: 1 / -1 to always span full width
+           ============================================= -->
+      <h2 class="section-title">Championship History</h2>
+      <div class="row row-full">
+        <article class="col-full">
+          <span class="badge">Hall of Champions</span>
+          <h3>The Greatest Championship Moments in Sports History</h3>
+          <img src="https://picsum.photos/seed/champions/1200/350" alt="Championship moments">
+          <p>From Michael Jordan's flu game to Joe Montana's legendary Super Bowl drives, sports history is defined by moments of extraordinary human performance. These are the stories that transcend the scoreboard and become part of our cultural fabric — reminding us why we watch, why we cheer, and why sports matter.</p>
+          <p>Every season brings the possibility of a new legend being born. Whether it's an underdog defying the odds or a dynasty cementing its legacy, championships reveal character and create memories that last a lifetime.</p>
+          <p><a href="#" target="_blank">Explore Championship History &gt;&gt;</a></p>
+        </article>
+      </div>
+
+      <!-- =============================================
+           ROW 5: 1-2-1 layout (narrow + wide + narrow)
+           Desktop: 3 columns with middle spanning 2 | Tablet/Mobile: stacked
+           Uses grid-column span — note order changes on mobile (order property)
+           ============================================= -->
+      <h2 class="section-title">Around the Leagues</h2>
+      <div class="row row-1-2-1">
+        <article class="col-side-left">
+          <span class="badge">NFL</span>
+          <h3>Kansas City Chiefs</h3>
+          <img src="https://picsum.photos/seed/chiefs/300/200" alt="Chiefs photo">
+          <p>Back-to-back Super Bowl champions. Patrick Mahomes has established himself as the best quarterback of his generation, leading KC to dynasty status.</p>
+          <p><a href="#" target="_blank">Read more &gt;&gt;</a></p>
+        </article>
+        <!-- 
+          The middle column uses grid-column: span 2 on desktop.
+          On mobile, we use the CSS `order` property to reorder items 
+          so the main feature appears first, then the side columns below it.
+          order: -1 moves this item before the others in the flow.
+        -->
+        <article class="col-center">
+          <span class="badge">Feature Match</span>
+          <h3>Boston Celtics: Banner 18 and the Pursuit of Greatness</h3>
+          <img src="https://picsum.photos/seed/celtics/600/300" alt="Celtics photo">
+          <p>The Boston Celtics captured their record 18th NBA Championship in 2024, cementing their place as the most successful franchise in league history. Led by Jayson Tatum and Jaylen Brown, the Celtics combined elite defense with unstoppable offensive firepower throughout the playoffs.</p>
+          <p>Head coach Joe Mazzulla guided the team through a dominant playoff run, showing maturity and resilience at every turn. Boston's victory reignited one of basketball's greatest rivalries and reminded the league that the Celtics will always be a force to reckon with.</p>
+          <p><a href="#" target="_blank">Read Full Story &gt;&gt;</a></p>
+        </article>
+        <article class="col-side-right">
+          <span class="badge">Soccer</span>
+          <h3>Real Madrid CF</h3>
+          <img src="https://picsum.photos/seed/realmadrid/300/200" alt="Real Madrid photo">
+          <p>Champions League royalty with 15 European titles. Real Madrid's ability to win in the biggest moments is unmatched in world football history.</p>
+          <p><a href="#" target="_blank">Read more &gt;&gt;</a></p>
+        </article>
+      </div>
+
+      <!-- =============================================
+           ROW 6 (UNIQUE): Auto-fill grid with minmax
+           This row uses CSS Grid's auto-fill + minmax() — NOT covered in lecture.
+           /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)) */
+           This creates as many columns as fit without overflow,
+           automatically wrapping without media queries. Items resize fluidly.
+           ============================================= -->
+      <h2 class="section-title">All Teams Directory</h2>
+      <div class="row row-autofill">
+        <!-- 
+          ROW 6 UNIQUE PROPERTY: repeat(auto-fill, minmax())
+          auto-fill: creates as many columns as possible that fit the container
+          minmax(180px, 1fr): each column is at least 180px but grows to fill space
+          This means NO media queries needed — the grid responds automatically!
+          This is different from auto-fit (which collapses empty tracks).
+        -->
+        <article class="col-auto">
+          <span class="badge">NBA</span>
+          <h3>Miami Heat</h3>
+          <p>Known for "Heat Culture," Miami's gritty work ethic and high standards have produced 3 NBA championships.</p>
+          <p><a href="#" target="_blank">Profile &gt;&gt;</a></p>
+        </article>
+        <article class="col-auto">
+          <span class="badge">NFL</span>
+          <h3>San Francisco 49ers</h3>
+          <p>With 5 Super Bowl titles and a legacy of greatness built on the West Coast Offense, the Niners are perennial contenders.</p>
+          <p><a href="#" target="_blank">Profile &gt;&gt;</a></p>
+        </article>
+        <article class="col-auto">
+          <span class="badge">MLB</span>
+          <h3>Los Angeles Dodgers</h3>
+          <p>One of baseball's most iconic franchises, the Dodgers have captured 8 World Series titles and counting.</p>
+          <p><a href="#" target="_blank">Profile &gt;&gt;</a></p>
+        </article>
+        <article class="col-auto">
+          <span class="badge">NHL</span>
+          <h3>Toronto Maple Leafs</h3>
+          <p>Canada's most followed team with a passionate fanbase and 13 Stanley Cup titles. A storied franchise with a bright future.</p>
+          <p><a href="#" target="_blank">Profile &gt;&gt;</a></p>
+        </article>
+        <article class="col-auto">
+          <span class="badge">Soccer</span>
+          <h3>FC Barcelona</h3>
+          <p>"Més que un club" — more than a club. Barça's tiki-taka style and legendary academy have shaped modern football globally.</p>
+          <p><a href="#" target="_blank">Profile &gt;&gt;</a></p>
+        </article>
+        <article class="col-auto">
+          <span class="badge">NBA</span>
+          <h3>Denver Nuggets</h3>
+          <p>2023 NBA Champions led by Nikola Jokić, the most unique superstar in basketball. Denver proved that team basketball wins titles.</p>
+          <p><a href="#" target="_blank">Profile &gt;&gt;</a></p>
+        </article>
+      </div>
+
+    </div><!-- end .wrapper -->
+  </body>
+</html>

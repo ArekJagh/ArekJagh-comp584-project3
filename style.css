@@ -1,0 +1,310 @@
+/* ================================================
+   Box Sizing Reset
+   https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+   ================================================ */
+html {
+  box-sizing: border-box;
+}
+*, 
+*::before, 
+*::after {
+  box-sizing: inherit;
+}
+
+/* ================================================
+   Base Styles
+   ================================================ */
+body {
+  font-family: 'Barlow', Arial, sans-serif;
+  background-color: #0d0d0d;
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #f5a623;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h3 {
+  font-family: 'Barlow Condensed', Arial Narrow, sans-serif;
+  font-weight: 900;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0.5rem 0;
+}
+
+p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+ul {
+  padding-left: 1rem;
+  line-height: 2;
+}
+
+img {
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+
+/* ================================================
+   Wrapper / Layout Container
+   ================================================ */
+.wrapper {
+  width: 97%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 0 3rem;
+}
+
+/* ================================================
+   Section Titles
+   ================================================ */
+.section-title {
+  font-family: 'Barlow Condensed', Arial Narrow, sans-serif;
+  font-weight: 900;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #f5a623;
+  border-bottom: 2px solid #f5a623;
+  padding-bottom: 0.3rem;
+  margin: 2.5rem 0 1rem;
+}
+
+/* ================================================
+   Badge Labels
+   ================================================ */
+.badge {
+  display: inline-block;
+  background-color: #f5a623;
+  color: #0d0d0d;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 2px 8px;
+  border-radius: 2px;
+  margin-bottom: 0.4rem;
+}
+
+/* ================================================
+   Article Card Base Styles
+   ================================================ */
+article {
+  background-color: #1a1a1a;
+  border: 1px solid #2e2e2e;
+  border-radius: 6px;
+  padding: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+article:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(245, 166, 35, 0.15);
+}
+
+/* ================================================
+   ROW: Base Grid Container
+   All rows use CSS Grid (no flexbox!)
+   Mobile first: single column by default
+   ================================================ */
+.row {
+  /* 
+    display: grid turns this element into a CSS Grid container.
+    All direct children become grid items automatically.
+  */
+  display: grid;
+  
+  /* 
+    gap: sets spacing between grid rows AND columns at once.
+    Equivalent to: row-gap + column-gap
+  */
+  gap: 1.25rem;
+
+  /* Mobile default: 1 column */
+  grid-template-columns: 1fr;
+  margin-bottom: 0;
+}
+
+/* ================================================
+   ROW 1: 4-Column Team Cards (.row-4col)
+   Mobile: 1 col | Tablet: 2 cols | Desktop: 4 cols
+   ================================================ */
+.col-1 {
+  background-color: #1e2a38;
+  border-color: #2a3f55;
+}
+
+/* Tablet */
+@media only screen and (min-width: 480px) {
+  .row-4col {
+    /* 
+      repeat(2, 1fr): creates 2 equal columns.
+      1fr = 1 fraction of available space.
+    */
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 768px) {
+  .row-4col {
+    /* repeat(4, 1fr): creates 4 equal columns */
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ================================================
+   ROW 2: 2 Wide Cards (.row-2col)
+   Mobile: 1 col | Tablet+Desktop: 2 cols
+   ================================================ */
+.col-2 {
+  background-color: #1f2b1e;
+  border-color: #2d422b;
+}
+
+@media only screen and (min-width: 480px) {
+  .row-2col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ================================================
+   ROW 3: Spotlight Layout — narrow sidebar + wide content
+   Mobile/Tablet: stacked | Desktop: 1 col + 3 cols
+   ================================================ */
+.col-sidebar {
+  background-color: #2a1f38;
+  border-color: #3d2a55;
+}
+
+.col-wide {
+  background-color: #1a1a1a;
+}
+
+@media only screen and (min-width: 768px) {
+  .row-spotlight {
+    /* 
+      Creates a 4-column grid (each unit = 1fr).
+      The sidebar takes 1 fraction, the wide content takes 3 fractions.
+    */
+    grid-template-columns: 1fr 3fr;
+  }
+}
+
+/* ================================================
+   ROW 4: Full-Width Banner (.row-full)
+   All sizes: single item spanning entire row
+   ================================================ */
+.col-full {
+  background-color: #1a1218;
+  border-color: #3a2030;
+
+  /*
+    grid-column: 1 / -1
+    This makes the item start at grid line 1 and end at -1 (the last line),
+    spanning ALL available columns regardless of how many there are.
+    Useful for full-width elements that always stretch across the entire grid.
+  */
+  grid-column: 1 / -1;
+}
+
+/* ================================================
+   ROW 5: 1-2-1 Layout (.row-1-2-1)
+   Mobile: 1 col | Tablet: 2 cols | Desktop: 4 cols with center spanning 2
+   ================================================ */
+.col-side-left,
+.col-side-right {
+  background-color: #1e2a38;
+  border-color: #2a3f55;
+}
+
+.col-center {
+  background-color: #26201a;
+  border-color: #4a3820;
+}
+
+/* Tablet */
+@media only screen and (min-width: 480px) {
+  .row-1-2-1 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* 
+    On tablet, the center article spans 2 columns to maintain importance.
+    order: -1 moves it to the top of the visual flow.
+    The `order` property changes the visual rendering order of grid/flex items
+    without changing the HTML structure. Lower values appear first.
+  */
+  .col-center {
+    grid-column: span 2;
+    order: -1;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 768px) {
+  .row-1-2-1 {
+    /* 4-unit grid: sidebar (1) + center (2) + sidebar (1) */
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .col-center {
+    /* 
+      grid-column: span 2 makes this item occupy 2 column tracks.
+      Combined with the 4-column grid, layout becomes: 1 + 2 + 1 = 4 units total.
+    */
+    grid-column: span 2;
+
+    /* 
+      Reset order to default so desktop layout follows DOM order:
+      left sidebar → center → right sidebar
+    */
+    order: 0;
+  }
+}
+
+/* ================================================
+   ROW 6 (UNIQUE): Auto-Fill Grid (.row-autofill)
+   
+   UNIQUE PROPERTY: repeat(auto-fill, minmax(180px, 1fr))
+   
+   This is NOT covered in the lecture. Here's how it works:
+   
+   - auto-fill: CSS Grid automatically calculates how many columns
+     can fit in the container at the current viewport width,
+     and creates that many column tracks.
+   
+   - minmax(180px, 1fr): Each column must be at least 180px wide,
+     but can grow up to 1fr (an equal share of remaining space).
+   
+   - Together: the grid places as many 180px-minimum columns as
+     possible per row, and stretches them equally to fill the space.
+     When the viewport shrinks, columns automatically wrap to the
+     next row — NO media queries needed at all!
+   
+   - Difference from auto-fit: auto-fill preserves empty column tracks
+     (keeping column widths consistent), while auto-fit collapses
+     empty tracks and lets items stretch to fill the whole row.
+   ================================================ */
+.row-autofill {
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+}
+
+.col-auto {
+  background-color: #1a1a2e;
+  border-color: #2a2a4a;
+}
